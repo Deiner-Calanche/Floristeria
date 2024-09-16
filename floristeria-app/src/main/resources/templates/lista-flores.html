@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gestión de Inventario de Flores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Inventario de Flores</h1>
+
+    <!-- Tabla para listar todas las flores -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Color</th>
+                <th>Variedad</th>
+                <th>Cantidad Disponible</th>
+                <th>Precio Compra</th>
+                <th>Precio Venta</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Bucle para iterar sobre la lista de flores -->
+            <tr th:each="flor : ${flores}">
+                <td th:text="${flor.id}"></td>
+                <td th:text="${flor.tipo}"></td>
+                <td th:text="${flor.color}"></td>
+                <td th:text="${flor.variedad}"></td>
+                <td th:text="${flor.cantidadDisponible}"></td>
+                <td th:text="${flor.precioCompra}"></td>
+                <td th:text="${flor.precioVenta}"></td>
+                <td>
+                    <!-- Enlaces para editar y eliminar flores -->
+                    <a th:href="@{/flores/editar/{id}(id=${flor.id})}">Editar</a> |
+                    <a th:href="@{/flores/eliminar/{id}(id=${flor.id})}" 
+                       onclick="return confirm('¿Estás seguro de que quieres eliminar esta flor?');">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Enlace para agregar una nueva flor -->
+    <a href="/flores/nueva">Agregar Flor</a>
+
+</body>
+</html>
+
