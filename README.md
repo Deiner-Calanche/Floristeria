@@ -67,7 +67,7 @@ La aplicación sigue una arquitectura **MVC (Modelo-Vista-Controlador)**, donde 
 3. Modifica el archivo `application.properties` (o `application.yml`) para incluir los detalles de conexión de tu base de datos MySQL:
 
     ```properties
-    spring.datasource.url=jdbc:mysql://localhost:3306/floristeria_app
+    spring.datasource.url=jdbc:mysql://localhost:3308/floristeria_app
     spring.datasource.username=tu_usuario
     spring.datasource.password=tu_contraseña
     spring.jpa.hibernate.ddl-auto=update
