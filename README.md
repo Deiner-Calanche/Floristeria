@@ -24,7 +24,7 @@ Floristería-App es una aplicación web diseñada para gestionar las operaciones
 
 ## Tecnologías Utilizadas
 
-- **Java 17**
+- **Java 21**
 - **Spring Boot**
 - **Spring Data JPA**
 - **MySQL** como base de datos
@@ -46,7 +46,7 @@ La aplicación sigue una arquitectura **MVC (Modelo-Vista-Controlador)**, donde 
 
 ### Requisitos Previos
 
-1. Tener instalado **Java 17** o superior.
+1. Tener instalado **Java 21** .
 2. Tener **MySQL** instalado y funcionando.
 3. Tener **Maven** instalado para la gestión de dependencias.
 
